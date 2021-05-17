@@ -1,8 +1,8 @@
-import urllib
+import urllib.request
 sources=[]
 def get_sources(link=""):
     print("Import: "+str(link))
-    list=urllib.urlopen(link).read()
+    list=urllib.request.urlopen(link).read().decode("UTF-8")
     for line in list.split("\n"):
         if len(line)<5:
             pass
