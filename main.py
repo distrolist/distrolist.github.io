@@ -1,5 +1,7 @@
 import urllib.request
+import os
 sources=[]
+os.mkdir("build")
 def get_sources(link=""):
     print("Import: "+str(link))
     list=urllib.request.urlopen(link).read().decode("UTF-8")
@@ -13,4 +15,13 @@ def get_sources(link=""):
 
 get_sources("https://raw.githubusercontent.com/paledega/distrolist.github.io/master/main.list")
 get_sources("https://raw.githubusercontent.com/paledega/distrolist.github.io/master/imports.list")
-print(sources)
+os.mkdir("build/sources")
+for s in sources:
+    print(s)
+    try:
+        f=urllib.request.urlopen(s).read().decode("UTF-8")
+        file="build/sources/"+s.split("/")[-1].split(".")[0]+".yaml"
+        print(file)
+        open(file,"w").write(f)
+    except:
+        pass
