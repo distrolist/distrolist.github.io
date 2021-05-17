@@ -1,3 +1,4 @@
+import urllib
 sources=[]
 def get_sources(link=""):
     list=urllib.urlopen(link).read()
@@ -6,5 +7,6 @@ def get_sources(link=""):
             get_sources(line.split(" ")[1])
         else:
             sources.append(line)
-            
-get_sources("import https://distrolist.github.io/main.list")
+
+get_sources("https://raw.githubusercontent.com/paledega/distrolist.github.io/master/main.list")
+print(sources)
