@@ -1,5 +1,6 @@
 name: example
 os-type: gnu/linux
+homepage: https://example.org
 based-on:
   - debian
 origin:
