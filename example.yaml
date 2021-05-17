@@ -1,0 +1,21 @@
+name: Debian
+os-type: gnu/linux
+based-on:
+  - debian
+origin:
+  - Turkey
+desktop:
+  - LXDE
+  - GNOME
+architecture:
+  - x86_64
+  - aarch64
+category:
+  - embeded
+  - server
+  - desktop
+description: 
+  - example description
+  - example second line
+images:
+  - https://www.debian.org/Pics/debian-logo-1024x576.png
