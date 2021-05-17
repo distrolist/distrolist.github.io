@@ -1,4 +1,4 @@
-name: Debian
+name: example
 os-type: gnu/linux
 based-on:
   - debian
