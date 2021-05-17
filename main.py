@@ -15,16 +15,16 @@ def get_sources(link=""):
                 sources.append(line)
     except:
         print("Failed to import url")
-
+print("\x1b[33;1mGetting source list\x1b[;0m")
 get_sources("https://raw.githubusercontent.com/distrolist/data/master/main.list")
 get_sources("https://raw.githubusercontent.com/distrolist/data/master/imports.list")
 os.mkdir("build/sources")
+print("\x1b[33;1mGetting distro information\x1b[;0m")
 for s in sources:
-    print(s)
     try:
         f=urllib.request.urlopen(s).read().decode("UTF-8")
+        print("Import: "+s)
         file="build/sources/"+s.split("/")[-1].split(".")[0]+".yaml"
-        print(file)
         open(file,"w").write(f)
     except:
-        pass
+        print("Fail:"+s)
