@@ -1,8 +1,8 @@
 name: example
-os-type: gnu/linux
+os-type: GNU/Linux
 homepage: https://example.org
 based-on:
-  - debian
+  - Debian
 origin:
   - Turkey
 desktop:
