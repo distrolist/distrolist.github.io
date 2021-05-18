@@ -12,6 +12,8 @@ founder:
 desktop:
   - LXDE
   - GNOME
+packagemanager:
+  - apt
 architecture:
   - x86_64
   - aarch64
