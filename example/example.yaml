@@ -1,10 +1,14 @@
 name: example
 os-type: GNU/Linux
 homepage: https://example.org
+license: GLPv2
+release: 2004
 based-on:
   - Debian
 origin:
   - Turkey
+founder:
+  - Ian Murdock
 desktop:
   - LXDE
   - GNOME
