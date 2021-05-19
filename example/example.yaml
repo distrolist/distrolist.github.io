@@ -1,7 +1,9 @@
 name: example
 os-type: GNU/Linux
 homepage: https://example.org
-license: GLPv2
+license:
+  - GLPv2
+  - BSD-2-Clause
 release: 2004
 based-on:
   - Debian
