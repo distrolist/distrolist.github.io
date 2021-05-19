@@ -1,7 +1,9 @@
 name: example
 os-type: GNU/Linux
 homepage: https://example.org
-license: GLPv2
+license:
+  - GLPv2
+  - BSD-2-Clause
 release: 2004
 based-on:
   - Debian
@@ -29,3 +31,10 @@ description:
   - example second line
 images:
   - https://www.debian.org/Pics/debian-logo-1024x576.png
+
+# sources
+# os-type: https://en.wikipedia.org/imaginary-article
+# license: https://www.not-a-website.xyz
+# ...
+# ...
+# ...
