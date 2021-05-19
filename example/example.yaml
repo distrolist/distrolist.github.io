@@ -12,7 +12,11 @@ founder:
 desktop:
   - LXDE
   - GNOME
-packagemanager: apt
+package-manager: 
+  - apt
+service-manager:
+  - sysvinit
+  - systemd
 architecture:
   - x86_64
   - aarch64
