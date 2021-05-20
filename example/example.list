@@ -1,4 +1,0 @@
-# You can import source
-import https://example.org/mylist.txt
-# Or you can add your distro.yaml file
-https://example.yaml/distro.yaml
