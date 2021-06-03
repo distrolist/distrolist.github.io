@@ -7,6 +7,7 @@ from template import page
 
 os.chdir("..")
 sources = os.listdir("build/sources")
+index_page=open("site/index.html","w")
 def l2str(l):
     if type(l) == type(""):
         print(l)
@@ -44,3 +45,6 @@ for s in sources:
             p.set_var("screenshot","Screenshot not available!")
         p.set_var("logo", "https://raw.githubusercontent.com/distrolist/data/master/res/" + contents["logo"])
         p.save()
+
+        index_page.write("<a href=\"{0}.html\">{0}</a><br>\n".format(contents["name"]))
+
