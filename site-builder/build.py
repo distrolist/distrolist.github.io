@@ -23,8 +23,11 @@ for s in sources:
         contents = yaml.load(open(glob.glob("build/sources/" + s + "/yaml/" + d)[0]).read(),
                              Loader=yaml.FullLoader)
 
-        with open("build/sources/" + s + "/rst/" + contents["description"], "r") as f:
-            description, warning = rst2html(f.read())
+        try:
+            with open("build/sources/" + s + "/rst/" + contents["description"], "r") as f:
+                description, warning = rst2html(f.read())
+        except:
+            description = "Desription not available!"
 
         p = page("site-builder/template.html")
         p.name = contents["name"]
@@ -43,7 +46,10 @@ for s in sources:
             p.set_var("screenshot",ss)
         except:
             p.set_var("screenshot","Screenshot not available!")
-        p.set_var("logo", "https://raw.githubusercontent.com/distrolist/data/master/logo/" + contents["logo"])
+        try:
+            p.set_var("logo", "https://raw.githubusercontent.com/distrolist/data/master/logo/" + contents["logo"])
+        except:
+            p.set_var("logo","")
         p.save()
 
         index_page.write("<a href=\"{0}.html\">{0}</a><br>\n".format(contents["name"]))

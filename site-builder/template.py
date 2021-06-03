@@ -19,4 +19,4 @@ class page:
         f.close()
     def set_var(self,variable,value):
         """set variable from template set_var("name","example")"""
-        self.template=self.template.replace("@{}@".format(variable),value)
+        self.template=self.template.replace("@{}@".format(variable),str(value))
