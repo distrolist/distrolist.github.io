@@ -10,9 +10,10 @@ body {
 	font-weight: 700;
 	font-family: monospace;
 	position: relative;
-	margin: 0;
+	margin: auto;
 	padding-bottom: 6rem;
 	min-height: 100%;
+	max-width: 1000px;
 }
 
 p {

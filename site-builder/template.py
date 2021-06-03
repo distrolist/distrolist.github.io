@@ -7,10 +7,12 @@ class page:
     def save(self):
         """save template to file"""
         f=open("{}/{}.html".format(self.path,self.name),"w")
+        f.write("<!DOCTYPE html>\n")
         f.write("<html>\n  <head>\n")
+        f.write("  <meta charset=\"utf-8\">\n")
         for c in self.css:
             f.write("  <link rel=\"Stylesheet\" href=\"{}\" />\n".format(c))
-        f.write("  </head>\n</body>\n")
+        f.write("  </head>\n<body>\n")
         for line in self.template.split("\n"):
             f.write("    {}\n".format(line))
         f.write("  </body>\n</html>")
