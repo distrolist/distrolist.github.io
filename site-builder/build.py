@@ -28,7 +28,7 @@ for s in sources:
 
         p = page("site-builder/template.html")
         p.name = contents["name"]
-        p.set_var("content", description)
+        p.set_var("description", description)
         for i in ["name","homepage","based-on","os-type","release","origin","founder",
                   "category","license","founder","desktop","package-manager",
                   "service-manager","architecture"]:
