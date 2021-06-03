@@ -3,7 +3,7 @@
 		<li><a href="#">
 				<img class="logo" src="https://avatars.githubusercontent.com/u/84348011" width="64" height="64" />
 			</a></li>
-		<li><a href="#">Homepage</a></li>
+		<li><a href=".">Homepage</a></li>
 	</ul>
 </nav>
 
@@ -11,9 +11,10 @@
 	<div class="infobox">
 		<div class="row">
 			<div class="column">
-				<h1 class="title">Debian</h1>
-				<img class="distro-logo" height="200" width="200"
-					src="https://raw.githubusercontent.com/distrolist/data/master/res/debian-logo.svg">
+				<h1 class="title">@name@</h1>
+			  <div class="vertical-center">
+				<img class="distro-logo" height="250" width="500" src="@logo@">
+				  </div>
 			</div>
 			<div class="column">
 				<h1 class="title">Informations</h1>
@@ -21,15 +22,15 @@
 					Homepage: @homepage@ <br>
 					OS Type: @os-type@ <br>
 					Based On: @based-on@ <br>
-					Release Year: @release-year@ <br>
+					Release Year: @release@ <br>
 					Origin: @origin@ <br>
 					Founder: @founder@ <br>
-					Categories: @categories@ <br>
-					License(s): @licenses@ <br>
-					Desktop Enviroment(s): @desktop-enviroments@ <br>
-					Package Manager(s): @package-managers@ <br>
-					Service Manager(s): @service-managers@ <br>
-					Architecture(s): @architectures@ <br>
+					Categories: @category@ <br>
+					License(s): @license@ <br>
+					Desktop Enviroment(s): @desktop@ <br>
+					Package Manager(s): @package-manager@ <br>
+					Service Manager(s): @service-manager@ <br>
+					Architecture(s): @architecture@ <br>
 				</p>
 			</div>
 		</div>
@@ -38,10 +39,7 @@
 
 		<div class="row">
 			<div class="gallery">
-				<a href="#">
-					<img src="https://distrowatch.com/images/ktyxqzobhgijab/debian-small.png" width="800" height="400">
-				</a>
-				<div class="desc">a</div>
+				@screenshot@
 			</div>
 		</div>
 

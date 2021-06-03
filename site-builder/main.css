@@ -62,8 +62,8 @@ main {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	height: auto;
 	padding: 5px;
+  object-fit: contain;
 }
 
 div.item {
@@ -106,10 +106,11 @@ div.item {
 }
 
 div.gallery {
-	margin: 5px;
-	border: 1px solid #ccc;
-	float: left;
-	width: 409px;
+	width: 100%; 
+	overflow: auto; 
+	white-space: nowrap;
+	border: none;
+	text-align: center
 }
 
 div.gallery:hover {
@@ -129,31 +130,6 @@ div.desc {
 .nav {
 	border-bottom: 1px solid #eef1f6;
 }
-
-.nav__toggle {
-	position: absolute;
-	cursor: pointer;
-	margin: 0rem 1rem;
-	right: 0;
-}
-
-.nav__toggle svg {
-	width: 1.5rem;
-	fill: #2a324b;
-}
-
-.nav__toggle .close {
-	display: none;
-}
-
-.nav__toggle .menu {
-	margin-top: 0.2rem;
-}
-
-.nav__checkbox {
-	display: none;
-}
-
 .nav__menu {
 	display: flex;
 	flex-direction: column;
@@ -178,31 +154,17 @@ div.desc {
 	font-size: 1.2rem;
 }
 
-.nav__menu svg {
-	width: 1.5rem;
-	fill: #2a324b;
-}
-
-#nav__checkbox:checked~ul.nav__menu li {
-	display: block;
-}
-
-#nav__checkbox:checked~label.nav__toggle .close {
-	display: block;
-}
-
-#nav__checkbox:checked~label.nav__toggle .menu {
-	display: none;
-}
 
 @media only screen and (min-width: 560px) {
-	.nav__toggle {
-		display: none;
-	}
 	.nav__menu {
 		flex-direction: row;
 	}
 	.nav__menu li {
 		display: block;
 	}
+}
+
+.vertical-center {
+  margin-top: auto;
+  margin-bottom: auto;
 }
