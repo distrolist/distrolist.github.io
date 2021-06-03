@@ -1,12 +1,13 @@
 class page:
-    def __init__(self,path=""):
-        self.template=open(path,"r").read()
-        self.path="site"
-        self.name="example"
-        self.css=["../site-builder/main.css"]
+    def __init__(self, path="", name="example"):
+        self.template = open(path, "r").read()
+        self.path = "site"
+        self.name = name
+        self.css = ["../site-builder/main.css"]
+
     def save(self):
         """save template to file"""
-        f=open("{}/{}.html".format(self.path,self.name),"w")
+        f = open("{}/{}.html".format(self.path, self.name), "w")
         f.write("<!DOCTYPE html>\n")
         f.write("<html>\n  <head>\n")
         f.write("  <meta charset=\"utf-8\">\n")
@@ -17,6 +18,9 @@ class page:
             f.write("    {}\n".format(line))
         f.write("  </body>\n</html>")
         f.close()
-    def set_var(self,variable,value):
+
+    def set_var(self, data):
         """set variable from template set_var("name","example")"""
-        self.template=self.template.replace("@{}@".format(variable),value)
+        print(data)
+        for key, value in data.items():
+            self.template = self.template.replace("@{}@".format(str(key)), str(value))
