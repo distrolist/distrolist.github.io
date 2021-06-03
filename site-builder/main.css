@@ -49,6 +49,10 @@ footer {
 	margin-right: auto;
 }
 
+.screenshot{
+  object-fit: contain;
+}
+
 main {
 	padding: 10px;
 }
@@ -86,7 +90,7 @@ div.item {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	--text-divider-gap: 1rem;
-	padding-top: 25px;
+	padding-bottom: 13px;
 }
 
 .text-divider::before,
@@ -113,13 +117,8 @@ div.gallery {
 	text-align: center
 }
 
-div.gallery:hover {
-	border: 1px solid #777;
-}
-
 div.gallery img {
 	width: 100%;
-	height: auto;
 }
 
 div.desc {

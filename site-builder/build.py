@@ -39,7 +39,7 @@ for s in sources:
         ss=""
         try:
             for img in contents["screenshot"]:
-                ss+="\t<img width=\"800\" height=\"400\" src=\""+"https://raw.githubusercontent.com/distrolist/data/master/res/"+str(img)+"\">\n"
+                ss+="\t<img class=\"screenshot\" src=\""+"https://raw.githubusercontent.com/distrolist/data/master/res/"+str(img)+"\">\n"
             p.set_var("screenshot",ss)
         except:
             p.set_var("screenshot","Screenshot not available!")
