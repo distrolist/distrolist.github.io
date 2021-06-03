@@ -39,11 +39,11 @@ for s in sources:
         ss=""
         try:
             for img in contents["screenshot"]:
-                ss+="\t<img width=\"800\" height=\"400\" src=\""+str(img)+"\">\n"
+                ss+="\t<img width=\"800\" height=\"400\" src=\""+"https://raw.githubusercontent.com/distrolist/data/master/res/"+str(img)+"\">\n"
             p.set_var("screenshot",ss)
         except:
             p.set_var("screenshot","Screenshot not available!")
-        p.set_var("logo", "https://raw.githubusercontent.com/distrolist/data/master/res/" + contents["logo"])
+        p.set_var("logo", "https://raw.githubusercontent.com/distrolist/data/master/logo/" + contents["logo"])
         p.save()
 
         index_page.write("<a href=\"{0}.html\">{0}</a><br>\n".format(contents["name"]))
