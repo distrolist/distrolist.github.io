@@ -1,61 +1,93 @@
-<img src="@logo@" class="logo">
-<table class="information">
-    <thead>
-    <tr>
-        <th style="text-align: center">Information</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th>Homepage</th>
-        <td>@homepage@</td>
-    </tr>
-    <tr>
-        <th>OS Type</th>
-        <td>@os-type@</td>
-    </tr>
-    <tr>
-        <th>Based On</th>
-        <td>@based-on@</td>
-    </tr>
-    <tr>
-        <th>Release Year</th>
-        <td>@release-year@</td>
-    </tr>
-    <tr>
-        <th>License(s)</th>
-        <td>@licenses@</td>
-    </tr>
-    <tr>
-        <th>Origin</th>
-        <td>@origin@</td>
-    </tr>
-    <tr>
-        <th>Founder</th>
-        <td>@founder@</td>
-    </tr>
-    <tr>
-        <th>Desktop Enviroment(s)</th>
-        <td>@desktop-enviroments@</td>
-    </tr>
-    <tr>
-        <th>Package Manager(s)</th>
-        <td>@package-managers@</td>
-    </tr>
-    <tr>
-        <th>Service Manager(s)</th>
-        <td>@service-managers@</td>
-    </tr>
-    <tr>
-        <th>Architecture(s)</th>
-        <td>@architectures@</td>
-    </tr>
-    <tr>
-        <th>Categories</th>
-        <td>@categories@</td>
-    </tr>
-    </tbody>
-</table>
-<div class="content">
-    @content@
-</div>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Distrolist - FOSS Alternative to Distrowatch">
+
+	<title>Distrolist</title>
+
+	<link rel="stylesheet" href="main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+</head>
+</body>
+
+<nav class="nav">
+	<input type="checkbox" id="nav__checkbox" class="nav__checkbox">
+	<label for="nav__checkbox" class="nav__toggle">
+		<svg class="menu" viewBox="0 0 448 512" width="100" title="bars">
+			<path
+				d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+		</svg>
+		<svg class="close" viewBox="0 0 384 512" width="100" title="times">
+			<path
+				d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+		</svg>
+	</label>
+	<ul class="nav__menu">
+		<li><a href="#">
+				<img src="https://avatars.githubusercontent.com/u/84348011?s=200&v=4" width="64" height="64" />
+			</a></li>
+		<li><a href="#">Homepage</a></li>
+	</ul>
+</nav>
+
+<main>
+	<div class="infobox">
+		<div class="row">
+			<div class="column">
+				<h1 class="title">Debian</h1>
+				<img class="distro-logo" height="200" width="200"
+					src="https://raw.githubusercontent.com/distrolist/data/master/res/debian-logo.svg" class="logo">
+			</div>
+			<div class="column">
+				<h1 class="title">Informations</h1>
+				<p>
+					Homepage: @homepage@ <br>
+					OS Type: @os-type@ <br>
+					Based On: @based-on@ <br>
+					Release Year: @release-year@ <br>
+					Origin: @origin@ <br>
+					Founder: @founder@ <br>
+					Categories: @categories@ <br>
+					License(s): @licenses@ <br>
+					Desktop Enviroment(s): @desktop-enviroments@ <br>
+					Package Manager(s): @package-managers@ <br>
+					Service Manager(s): @service-managers@ <br>
+					Architecture(s): @architectures@ <br>
+				</p>
+			</div>
+		</div>
+
+		<div class="text-divider title">Gallery</div>
+
+		<div class="row">
+			<div class="gallery">
+				<a href="#">
+					<img src="https://distrowatch.com/images/ktyxqzobhgijab/debian-small.png" width=800" height="400">
+				</a>
+				<div class="desc">a</div>
+			</div>
+		</div>
+
+		<div class="text-divider title">Description</div>
+
+		<div class="row">
+			<div class="description">
+				<p>hello world</p>
+			</div>
+		</div>
+
+
+	</div>
+</main>
+
+<footer>
+	<div class="bottom">
+		<p><a href="#">Distrolist</a> - FOSS Alternative to Distrowatch</p>
+	</div>
+</footer>
+</body>
+
+</html>
